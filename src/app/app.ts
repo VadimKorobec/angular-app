@@ -4,10 +4,11 @@ import { Test } from './components/test/test';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Test],
+  imports: [Test],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
 export class App {
+  messageFromParent = 'I am your father!!!';
   protected readonly title = signal('my-app');
 }

@@ -9,4 +9,11 @@
   </p>
 
   <button [disabled]="!isEnabled">Click me!</button>
+
+  <button (click)="toggleState()">Toggle State</button>
+
+  <input [(ngModel)]="inputText" type="text" />
+  <p>{{ inputText }}</p>
+
+  <p>{{ childMessage }}</p>
 </div>
