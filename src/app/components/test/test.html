@@ -2,5 +2,11 @@
   <p>Test component</p>
   <p>{{ title }}</p>
   <p>{{ getFullName() }}</p>
+
+  <p [ngStyle]="{ color: 'red' }">Here was used ngStyle</p>
+  <p [ngClass]="{ active: isActive, disabled: isDisabled }">
+    Here was used ngClass
+  </p>
+
   <button [disabled]="!isEnabled">Click me!</button>
 </div>

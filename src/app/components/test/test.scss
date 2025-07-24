@@ -2,6 +2,12 @@ div {
   background-color: burlywood;
 }
 
-p {
-  color: red;
+.active {
+  background-color: #007bff;
+}
+
+.disabled {
+  background-color: #f0f0f0;
+  color: #999999;
+  cursor: not-allowed;
 }
