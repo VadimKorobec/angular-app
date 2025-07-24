@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -24,11 +24,17 @@ export class Test {
 
   @Input() childMessage = '';
 
+  @Output() messageFromChild = new EventEmitter<string>();
+
   getFullName() {
     return `My full name is ${this.firstName} ${this.lastName}`;
   }
 
   toggleState() {
     this.isClickedState = true;
+  }
+
+  sendMessageToParent() {
+    this.messageFromChild.emit('I am your son!');
   }
 }

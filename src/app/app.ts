@@ -10,5 +10,12 @@ import { Test } from './components/test/test';
 })
 export class App {
   messageFromParent = 'I am your father!!!';
+
+  messageFromChild = '';
+
+  getMessageFromChild(message: string) {
+    this.messageFromChild = message;
+  }
+
   protected readonly title = signal('my-app');
 }
